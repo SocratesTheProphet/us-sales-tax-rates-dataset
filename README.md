@@ -1,6 +1,6 @@
 # US Sales-Tax Rates (statewide base) — a small, honest, validated dataset
 
-Machine-readable **statewide base sales-tax rates for all 50 US states + DC**, validated against official state Department of Revenue (DOR) sources on **2026-07-01**. Available as JSON and CSV, at quarter-basis-point precision, with enacted future rate changes included and dated.
+Machine-readable **statewide base sales-tax rates for all 50 US states + DC**, validated against official state tax-authority (DOR-equivalent) sources on **2026-07-01**. Available as JSON and CSV, at quarter-basis-point precision, with enacted future rate changes included and dated.
 
 Most free sales-tax data is ZIP-code-based and quietly wrong — ZIP codes cross tax jurisdictions, so a single "rate per ZIP" is a guess that can be off by a full percent or more. This dataset takes the opposite stance: it gives **authoritative statewide rates**, and where local rates genuinely vary, it **says so instead of fabricating a number**.
 
@@ -54,7 +54,7 @@ To apply a scheduled change: if today ≥ `scheduled_change_date`, use `schedule
 
 ## Sourcing & validation
 
-All 51 base rates were validated on **2026-07-01** against official state DOR sources (a multi-pass sweep). Values are the minimum combined statewide rate under the Tax Foundation convention. Each row's `source` field records what it was checked against.
+All 51 base rates were validated on **2026-07-01** against official state DOR/tax-authority sources (a multi-pass sweep) (DC re-verified and corrected 2026-07-16; see CHANGELOG v1.0.1). Values are the minimum combined statewide rate under the Tax Foundation convention. Each row's `source` field records what it was checked against.
 
 ## Limitations (please read)
 
@@ -72,4 +72,4 @@ This dataset is provided for informational purposes only and is **not** tax, leg
 
 ---
 
-*Maintained by Sean Murphy. Validated 2026-07-01. Contributions and corrections welcome — open an issue with a DOR source link.*
+*Maintained by Sean Murphy. Validated 2026-07-01 (DC re-verified 2026-07-16). Contributions and corrections welcome — open an issue with a DOR source link.*

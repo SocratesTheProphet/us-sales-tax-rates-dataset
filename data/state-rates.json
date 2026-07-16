@@ -1,5 +1,5 @@
 {
-  "_meta": "US statewide base sales-tax rates. state_bps = basis points at quarter-bps resolution (1% = 100 bps; values exact multiples of 0.25, exact in IEEE-754). state_bps is the minimum combined statewide rate (Tax Foundation convention; decompositions in source). scheduled_change = enacted future rate with effective date. Validated against official state DOR sources 2026-07-01. See SCHEMA.md.",
+  "_meta": "US statewide base sales-tax rates. state_bps = basis points at quarter-bps resolution (1% = 100 bps; values exact multiples of 0.25, exact in IEEE-754). state_bps is the minimum combined statewide rate (Tax Foundation convention; decompositions in source). scheduled_change = enacted future rate with effective date. Validated against official state DOR/tax-authority sources 2026-07-01 (DC re-verified 2026-07-16). See SCHEMA.md.",
   "AL": { "name": "Alabama", "state_bps": 400, "local_varies": true, "source": "AL DOR" },
   "AK": { "name": "Alaska", "state_bps": 0, "local_varies": true, "source": "no statewide tax; ~110 of 162 municipalities levy 1-7% local" },
   "AZ": { "name": "Arizona", "state_bps": 560, "local_varies": true, "source": "AZ DOR (TPT — seller privilege tax)" },
