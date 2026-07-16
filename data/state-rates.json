@@ -1,5 +1,5 @@
 {
-  "_meta": "SINGLE SOURCE OF TRUTH for US statewide base sales-tax rates. Consumed by worker/ and landing/. bps = basis points at QUARTER-BPS resolution (1% = 100 bps; values are exact multiples of 0.25, which are exact in IEEE-754 — MN 687.5, NJ 662.5, NM 487.5, MO 422.5). state_bps means the minimum combined statewide rate (Tax Foundation convention: includes mandatory uniform local components — CA, UT, NV, VA decompositions in source). scheduled_change = enacted future rate with effective date; worker applies it by date. VALIDATED against official state DOR sources 2026-07-01 (six-agent sweep, source URLs in validation report). The weekly refresh pipeline overwrites with live-sourced values.",
+  "_meta": "US statewide base sales-tax rates. state_bps = basis points at quarter-bps resolution (1% = 100 bps; values exact multiples of 0.25, exact in IEEE-754). state_bps is the minimum combined statewide rate (Tax Foundation convention; decompositions in source). scheduled_change = enacted future rate with effective date. Validated against official state DOR sources 2026-07-01. See SCHEMA.md.",
   "AL": { "name": "Alabama", "state_bps": 400, "local_varies": true, "source": "AL DOR" },
   "AK": { "name": "Alaska", "state_bps": 0, "local_varies": true, "source": "no statewide tax; ~110 of 162 municipalities levy 1-7% local" },
   "AZ": { "name": "Arizona", "state_bps": 560, "local_varies": true, "source": "AZ DOR (TPT — seller privilege tax)" },
@@ -50,5 +50,5 @@
   "WV": { "name": "West Virginia", "state_bps": 600, "local_varies": true, "source": "WV Tax Div (municipal add-ons all currently 1%)" },
   "WI": { "name": "Wisconsin", "state_bps": 500, "local_varies": true, "source": "WI DOR (counties +0.5%; Milwaukee Co. 0.9%; City of Milwaukee 2.0%)" },
   "WY": { "name": "Wyoming", "state_bps": 400, "local_varies": true, "source": "WY DOR (county options up to 2%)" },
-  "DC": { "name": "Washington, D.C.", "state_bps": 600, "local_varies": false, "source": "DC OTR (single jurisdiction; 6.0% through 2026-09-30 per official OTR notice)", "scheduled_change": { "date": "2026-10-01", "state_bps": 700 } }
+  "DC": { "name": "Washington, D.C.", "state_bps": 650, "local_varies": false, "source": "6.5% effective 2025-10-01, 7.0% effective 2026-10-01 per DC OTR notice", "scheduled_change": { "date": "2026-10-01", "state_bps": 700 } }
 }

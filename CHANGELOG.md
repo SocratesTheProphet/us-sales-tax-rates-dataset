@@ -1,5 +1,12 @@
 # Changelog
 
+## v1.0.1 — 2026-07-16
+
+Correction: DC OTR raised the District of Columbia base rate to 6.5% effective 2025-10-01. v1.0.0 shipped a stale 6.0% value.
+
+- `DC` `state_bps` corrected 600 → 650 (6.0% → 6.5%) in both `data/state-rates.json` and `data/state-rates.csv`.
+- `scheduled_change` to 7.0% on 2026-10-01 is unaffected and remains intact.
+
 ## v1.0.0 — 2026-07-04
 
 Initial public release.

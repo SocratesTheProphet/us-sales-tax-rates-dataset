@@ -49,4 +49,4 @@ WA,Washington,6.500,650,true,false,,,WA DOR (destination-based; locals updated q
 WV,West Virginia,6.000,600,true,false,,,WV Tax Div (municipal add-ons all currently 1%)
 WI,Wisconsin,5.000,500,true,false,,,WI DOR (counties +0.5%; Milwaukee Co. 0.9%; City of Milwaukee 2.0%)
 WY,Wyoming,4.000,400,true,false,,,WY DOR (county options up to 2%)
-DC,"Washington, D.C.",6.000,600,false,true,2026-10-01,7.000,DC OTR (single jurisdiction; 6.0% through 2026-09-30 per official OTR notice)
+DC,"Washington, D.C.",6.500,650,false,true,2026-10-01,7.000,"6.5% effective 2025-10-01, 7.0% effective 2026-10-01 per DC OTR notice"

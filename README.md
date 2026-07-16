@@ -10,7 +10,7 @@ Most free sales-tax data is ZIP-code-based and quietly wrong — ZIP codes cross
 - **Honest about local variation.** 14 jurisdictions have no local sales tax or a uniform statewide rate — for those, the statewide rate **is** the authoritative combined rate. For the other 37, `local_varies: true` flags that a rooftop-level lookup is required, and the dataset does **not** invent a single combined number.
 - **Documented conventions.** Where a "statewide rate" bundles mandatory uniform local components (the Tax Foundation min-combined convention — e.g. California's 7.25% = 6% state + 1.25% mandatory uniform local), the decomposition is spelled out in the row's `source` string. No hidden assumptions.
 - **Future changes, dated.** Enacted-but-not-yet-effective changes are carried as `scheduled_change` with an effective date, so you can apply the right rate by date:
-  - District of Columbia — 6.000% → 7.000% on 2026-10-01
+  - District of Columbia — 6.500% → 7.000% on 2026-10-01
   - South Dakota — 4.200% → 4.500% on 2027-07-01
   - Louisiana — 5.000% → 4.750% on 2030-01-01
 - **Sourced per row.** Every state carries the DOR/source it was checked against.
@@ -64,7 +64,7 @@ All 51 base rates were validated on **2026-07-01** against official state DOR so
 
 ## License
 
-Released under **CC BY 4.0** — free to use, share, and adapt, including commercially, with attribution. See `LICENSE`. (Prefer no-attribution? Swap it to CC0. Prefer code-style? MIT. Your call — it's your data.)
+Released under **CC BY 4.0** — free to use, share, and adapt, including commercially, with attribution. See `LICENSE`.
 
 ## Disclaimer
 
