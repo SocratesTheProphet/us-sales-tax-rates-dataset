@@ -1,0 +1,52 @@
+code,name,state_rate_pct,state_bps,local_varies,authoritative_combined,scheduled_change_date,scheduled_change_pct,source
+AL,Alabama,4.000,400,true,false,,,AL DOR
+AK,Alaska,0.000,0,true,false,,,no statewide tax; ~110 of 162 municipalities levy 1-7% local
+AZ,Arizona,5.600,560,true,false,,,AZ DOR (TPT — seller privilege tax)
+AR,Arkansas,6.500,650,true,false,,,AR DFA
+CA,California,7.250,725,true,false,,,CA CDTFA (7.25% floor = 6% state + 1.25% mandatory uniform local; districts add 0.10-2.00%)
+CO,Colorado,2.900,290,true,false,,,CO DOR (home-rule cities self-administer)
+CT,Connecticut,6.350,635,false,true,,,CT DRS (state-only; 7.75% luxury / 1% computer-services category rates exist)
+DE,Delaware,0.000,0,false,true,,,no sales tax (seller-side gross receipts tax exists — not billable to buyers)
+FL,Florida,6.000,600,true,false,,,"FL DOR (county surtax has $5,000 single-item cap)"
+GA,Georgia,4.000,400,true,false,,,GA DOR
+HI,Hawaii,4.000,400,true,false,,,HI DOTAX (GET on seller; county surcharge 0.5%; max pass-on 4.712%)
+ID,Idaho,6.000,600,true,false,,,ID STC (locals only in resort cities/auditorium districts)
+IL,Illinois,6.250,625,true,false,,,IL DOR (local changes Jan 1 / Jul 1)
+IN,Indiana,7.000,700,false,true,,,IN DOR (state-only)
+IA,Iowa,6.000,600,true,false,,,IA DOR (1% LOST in most jurisdictions)
+KS,Kansas,6.500,650,true,false,,,KS DOR
+KY,Kentucky,6.000,600,false,true,,,KY DOR (state-only)
+LA,Louisiana,5.000,500,true,false,2030-01-01,4.750,"LA DOR (5% since 2025-01-01, Act 11; parish/municipal locals substantial)"
+ME,Maine,5.500,550,false,true,,,ME MRS (state-only)
+MD,Maryland,6.000,600,false,true,,,"MD Comptroller (state-only; category rates exist: 9% alcohol, 3% data/IT services)"
+MA,Massachusetts,6.250,625,false,true,,,MA DOR (state-only for tangible goods; local option is meals/lodging only)
+MI,Michigan,6.000,600,false,true,,,MI Treasury (state-only)
+MN,Minnesota,6.875,687.5,true,false,,,MN DOR (exactly 6.875%)
+MS,Mississippi,7.000,700,true,false,,,"MS DOR (locals: only Jackson +1%, Tupelo +0.25%)"
+MO,Missouri,4.225,422.5,true,false,,,MO DOR (exactly 4.225% = 3.0 GR + 1.0 Education + 0.125 Conservation + 0.10 Parks/Soils)
+MT,Montana,0.000,0,false,true,,,no sales tax (resort-community taxes on lodging/prepared food only)
+NE,Nebraska,5.500,550,true,false,,,NE DOR (Good Life District addresses: state rate 2.75% since 2024-07-01)
+NV,Nevada,6.850,685,true,false,,,NV DOT (6.85% mandatory-minimum combined: 2.00 state + 2.60 LSST + 0.50 BCCRT + 1.75 SCCRT; county options on top)
+NH,New Hampshire,0.000,0,false,true,,,no sales tax (8.5% meals & rentals is category-specific)
+NJ,New Jersey,6.625,662.5,false,true,,,"NJ Treasury (exactly 6.625%, uniform statewide; UEZ/Salem County REDUCED rates exist for qualified sellers)"
+NM,New Mexico,4.875,487.5,true,false,,,NM TRD (GRT exactly 4.875%; rates change only each Jul 1 — re-verify annually)
+NY,New York,4.000,400,true,false,,,NY DTF (locals + 0.375% MCTD surcharge in metro district)
+NC,North Carolina,4.750,475,true,false,,,NC DOR (Mecklenburg Co. +1% local effective 2026-07-01)
+ND,North Dakota,5.000,500,true,false,,,ND OTC
+OH,Ohio,5.750,575,true,false,,,OH DOT (county/transit locals change quarterly)
+OK,Oklahoma,4.500,450,true,false,,,OK TC (quarterly COPO rate charts)
+OR,Oregon,0.000,0,false,true,,,no sales tax
+PA,Pennsylvania,6.000,600,true,false,,,"PA DOR (locals are exactly two: Allegheny +1%, Philadelphia +2%)"
+RI,Rhode Island,7.000,700,false,true,,,RI DOT (state-only)
+SC,South Carolina,6.000,600,true,false,,,SC DOR (voter-approved county local options)
+SD,South Dakota,4.200,420,true,false,2027-07-01,4.500,SD DOR (4.2% sunset intact — reverts 2027-07-01)
+TN,Tennessee,7.000,700,true,false,,,TN DOR (locals capped at 2.75%)
+TX,Texas,6.250,625,true,false,,,TX Comptroller (locals up to 2%; 8.25% max combined)
+UT,Utah,6.100,610,true,false,,,UT TC (6.10% mandatory-minimum combined: 4.85 state + 1.00 local option + 0.25 county option; optional levies to ~9.05%)
+VT,Vermont,6.000,600,true,false,,,VT DOT (1% local option where adopted)
+VA,Virginia,5.300,530,true,false,,,VA TAX (5.3% floor = 4.3% state + 1.0% mandatory local; regional totals 6.0/6.3/7.0%)
+WA,Washington,6.500,650,true,false,,,WA DOR (destination-based; locals updated quarterly)
+WV,West Virginia,6.000,600,true,false,,,WV Tax Div (municipal add-ons all currently 1%)
+WI,Wisconsin,5.000,500,true,false,,,WI DOR (counties +0.5%; Milwaukee Co. 0.9%; City of Milwaukee 2.0%)
+WY,Wyoming,4.000,400,true,false,,,WY DOR (county options up to 2%)
+DC,"Washington, D.C.",6.000,600,false,true,2026-10-01,7.000,DC OTR (single jurisdiction; 6.0% through 2026-09-30 per official OTR notice)
