@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/us-sales-tax-rates-dataset/state-rates.schema.json",
+  "title": "US statewide sales tax rates",
+  "description": "Schema for data/state-rates.json: an object keyed by two-letter jurisdiction code, plus a top-level _meta string.",
+  "type": "object",
+  "properties": {
+    "_meta": {
+      "type": "string"
+    }
+  },
+  "patternProperties": {
+    "^[A-Z]{2}$": {
+      "$ref": "#/$defs/jurisdiction"
+    }
+  },
+  "required": ["_meta"],
+  "additionalProperties": false,
+  "$defs": {
+    "jurisdiction": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "state_bps": {
+          "type": "number",
+          "minimum": 0,
+          "multipleOf": 0.25
+        },
+        "local_varies": {
+          "type": "boolean"
+        },
+        "source": {
+          "type": "string",
+          "minLength": 1
+        },
+        "scheduled_change": {
+          "type": "object",
+          "properties": {
+            "date": {
+              "type": "string",
+              "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+            },
+            "state_bps": {
+              "type": "number",
+              "minimum": 0,
+              "multipleOf": 0.25
+            }
+          },
+          "required": ["date", "state_bps"],
+          "additionalProperties": false
+        }
+      },
+      "required": ["name", "state_bps", "local_varies", "source"],
+      "additionalProperties": false
+    }
+  }
+}

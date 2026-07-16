@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this dataset, please cite it as below."
+type: dataset
+title: "US Sales-Tax Rates (statewide base)"
+authors:
+  - family-names: Murphy
+    given-names: Sean
+version: 1.1.0
+date-released: "2026-07-16"
+license: CC-BY-4.0
+repository-code: "https://github.com/SocratesTheProphet/us-sales-tax-rates-dataset"
+keywords:
+  - sales-tax
+  - dataset
+  - us-states
+  - tax-rates
+  - open-data

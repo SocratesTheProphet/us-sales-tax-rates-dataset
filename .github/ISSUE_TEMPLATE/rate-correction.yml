@@ -1,0 +1,63 @@
+name: Rate correction
+description: Report a wrong or outdated rate, backed by an official state tax-authority source.
+title: "[Correction] "
+labels:
+  - correction
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Corrections need an **official state DOR/tax-authority source** — not an aggregator (Avalara, TaxJar, SalesTaxHandbook, Wikipedia, etc.). See `CONTRIBUTING.md` for why.
+
+  - type: input
+    id: state
+    attributes:
+      label: State (two-letter code)
+      description: e.g. CA, NY, DC
+      placeholder: "CA"
+    validations:
+      required: true
+
+  - type: input
+    id: current_value
+    attributes:
+      label: Current value in this dataset
+      description: What `data/state-rates.json` / `data/state-rates.csv` currently says for this state.
+      placeholder: "e.g. state_bps: 725 (7.25%)"
+    validations:
+      required: true
+
+  - type: input
+    id: claimed_value
+    attributes:
+      label: Claimed (correct) value
+      description: What you believe the rate should be.
+      placeholder: "e.g. 7.50%"
+    validations:
+      required: true
+
+  - type: input
+    id: effective_date
+    attributes:
+      label: Effective date
+      description: The date the claimed value took effect, or takes effect if it's a future scheduled change (ISO format).
+      placeholder: "YYYY-MM-DD"
+    validations:
+      required: true
+
+  - type: input
+    id: authority_link
+    attributes:
+      label: Official source link
+      description: Link to the state's own DOR/tax-authority page, statute, or official notice/bulletin. Aggregator links will not be accepted.
+      placeholder: "https://..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional notes
+      description: Anything else relevant — e.g. whether this changes local_varies, or decomposes a min-combined rate into state + mandatory local components.
+    validations:
+      required: false

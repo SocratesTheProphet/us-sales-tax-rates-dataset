@@ -1,5 +1,7 @@
 # US Sales-Tax Rates (statewide base) — a small, honest, validated dataset
 
+[![Validate](https://github.com/SocratesTheProphet/us-sales-tax-rates-dataset/actions/workflows/validate.yml/badge.svg)](https://github.com/SocratesTheProphet/us-sales-tax-rates-dataset/actions/workflows/validate.yml)
+
 Machine-readable **statewide base sales-tax rates for all 50 US states + DC**, validated against official state tax-authority (DOR-equivalent) sources on **2026-07-01**. Available as JSON and CSV, at quarter-basis-point precision, with enacted future rate changes included and dated.
 
 Most free sales-tax data is ZIP-code-based and quietly wrong — ZIP codes cross tax jurisdictions, so a single "rate per ZIP" is a guess that can be off by a full percent or more. This dataset takes the opposite stance: it gives **authoritative statewide rates**, and where local rates genuinely vary, it **says so instead of fabricating a number**.
@@ -27,8 +29,11 @@ For these, the statewide rate is the full combined rate you can charge. (DE, MT,
 |---|---|
 | `data/state-rates.json` | Source of truth. Keyed by two-letter code, plus a `_meta` field with the honesty notes. |
 | `data/state-rates.csv` | Flat version — one row per jurisdiction, spreadsheet-friendly. |
+| `data/rate-history.csv` | Append-only ledger of realized rate corrections (see `SCHEMA.md`). |
+| `schema/state-rates.schema.json` | Formal JSON Schema for `data/state-rates.json`. |
 | `SCHEMA.md` | Field-by-field definitions for both formats. |
 | `CHANGELOG.md` | Versions and validation dates. |
+| `CONTRIBUTING.md` | How to report or submit a rate correction. |
 
 ## Usage
 
@@ -55,6 +60,16 @@ To apply a scheduled change: if today ≥ `scheduled_change_date`, use `schedule
 ## Sourcing & validation
 
 All 51 base rates were validated on **2026-07-01** against official state DOR/tax-authority sources (a multi-pass sweep) (DC re-verified and corrected 2026-07-16; see CHANGELOG v1.0.1). Values are the minimum combined statewide rate under the Tax Foundation convention. Each row's `source` field records what it was checked against.
+
+## Validating
+
+`scripts/validate.py` (stdlib-only) checks that `state-rates.json`, `state-rates.csv`, and `rate-history.csv` stay consistent — same code sets, matching fields, quarter-bps resolution, valid scheduled-change dates. Run it locally:
+
+```
+python scripts/validate.py
+```
+
+CI runs the same check on every push and PR via `.github/workflows/validate.yml`.
 
 ## Limitations (please read)
 

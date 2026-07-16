@@ -1,5 +1,18 @@
 # Changelog
 
+## v1.1.0 — 2026-07-16
+
+Tooling/infrastructure release. No data changes.
+
+- Added `scripts/validate.py` — stdlib-only consistency check between `state-rates.json`, `state-rates.csv`, and `rate-history.csv`; exits non-zero on failure.
+- Added `.github/workflows/validate.yml` — CI runs `validate.py` on every push and PR.
+- Added `CONTRIBUTING.md` — correction/PR process and maintainer release checklist.
+- Added `.github/ISSUE_TEMPLATE/rate-correction.yml` — structured rate-correction issue form.
+- Added `CITATION.cff` — machine-readable citation metadata.
+- Added `schema/state-rates.schema.json` — formal JSON Schema for `data/state-rates.json`.
+- Added `data/rate-history.csv` — append-only ledger of realized rate corrections (documented in `SCHEMA.md`).
+- `data/state-rates.json` `_meta`: prepended `v1.1.0 | validated 2026-07-01 (DC re-verified 2026-07-16) |` version/validation tokens ahead of the existing descriptive text (string field, non-breaking).
+
 ## v1.0.1 — 2026-07-16
 
 Correction: DC OTR raised the District of Columbia base rate to 6.5% effective 2025-10-01. v1.0.0 shipped a stale 6.0% value.
