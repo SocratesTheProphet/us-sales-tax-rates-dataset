@@ -1,5 +1,13 @@
 # Changelog
 
+## v1.1.1 — 2026-08-01
+
+Correction: reverses the v1.0.1 DC change. DC OTR confirms the general sales-tax rate remained 6.0% through 2026-09-30 — the planned 6.5% step (2025-10-01) was cancelled by the Sales Tax Increase Delay Amendment Act of 2025. v1.0.1 had incorrectly set DC to 6.5%.
+
+- `DC` `state_bps` corrected 650 -> 600 (6.5% -> 6.0%) in both `data/state-rates.json` and `data/state-rates.csv`. Source: DC OTR notice (https://otr.cfo.dc.gov/release/notice-oct-1-2025-tax-changes).
+- `scheduled_change` to 7.0% (700 bps) on 2026-10-01 is unaffected and remains intact.
+- Monthly re-validation 2026-08-01: all 51 jurisdictions re-checked against official DOR sources; DC was the only discrepancy. SD (2027-07-01 sunset -> 450) and LA (2030-01-01 -> 475) future changes reconfirmed intact.
+
 ## v1.1.0 — 2026-07-16
 
 Tooling/infrastructure release. No data changes.
