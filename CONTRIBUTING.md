@@ -23,6 +23,7 @@ If you don't have an official link, still open the issue — just say so. It'll 
    - `data/state-rates.json`
    - `data/state-rates.csv`
    - `data/rate-history.csv` (append a row: `date_observed, code, field, old_value, new_value, effective_date, source`)
+   - `README.md` (validation dates + scheduled-change list)
    - `CHANGELOG.md` (new version entry describing the correction)
 3. `CITATION.cff` — bump `version` and `date-released` in the **same commit**.
 4. Version bump follows semver-ish convention: a rate correction is a **patch** (`1.0.1`), a new field or jurisdiction is **minor**, a breaking schema change is **major**.
@@ -58,7 +59,7 @@ If you want that, this dataset is a fine input to build it from — just not som
 - [ ] `data/state-rates.csv` updated (stays in sync with JSON)
 - [ ] `data/rate-history.csv` row appended
 - [ ] `CHANGELOG.md` entry added
-- [ ] `README.md` validation dates and the scheduled-change list updated (they duplicate `_meta`)
+- [ ] `README.md` validation dates and the scheduled-change list updated (they duplicate `_meta` and the rows' `scheduled_change` fields)
 - [ ] `CITATION.cff` `version` + `date-released` bumped, same commit
 - [ ] `python scripts/validate.py` passes
 - [ ] Commit tagged with the new version

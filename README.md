@@ -27,7 +27,7 @@ For these, the statewide rate is the full combined rate you can charge. (DE, MT,
 
 | File | What it is |
 |---|---|
-| `data/state-rates.json` | Source of truth. Keyed by two-letter code, plus a `_meta` field with the honesty notes. |
+| `data/state-rates.json` | Source of truth. Keyed by two-letter code, plus a `_meta` string carrying the version, validation date, and convention notes. |
 | `data/state-rates.csv` | Flat version — one row per jurisdiction, spreadsheet-friendly. |
 | `data/rate-history.csv` | Append-only ledger of realized rate corrections (see `SCHEMA.md`). |
 | `schema/state-rates.schema.json` | Formal JSON Schema for `data/state-rates.json`. |
