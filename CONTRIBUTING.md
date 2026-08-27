@@ -58,6 +58,7 @@ If you want that, this dataset is a fine input to build it from — just not som
 - [ ] `data/state-rates.csv` updated (stays in sync with JSON)
 - [ ] `data/rate-history.csv` row appended
 - [ ] `CHANGELOG.md` entry added
+- [ ] `README.md` validation dates and the scheduled-change list updated (they duplicate `_meta`)
 - [ ] `CITATION.cff` `version` + `date-released` bumped, same commit
 - [ ] `python scripts/validate.py` passes
 - [ ] Commit tagged with the new version

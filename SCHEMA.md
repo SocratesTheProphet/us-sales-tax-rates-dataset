@@ -2,7 +2,7 @@
 
 ## `data/state-rates.json`
 
-An object keyed by two-letter jurisdiction code (`"AL"`, `"AK"`, … `"DC"`), plus one special `_meta` string key describing the dataset's conventions. Each jurisdiction value:
+An object keyed by two-letter jurisdiction code (`"AL"`, `"AK"`, … `"DC"`), plus one special `_meta` string key. `_meta` begins with two pipe-delimited tokens — the dataset version (e.g. `v1.1.1`) and the validation date (e.g. `validated 2026-08-01 (...)`) — followed by prose describing the dataset's conventions. Each jurisdiction value:
 
 | Field | Type | Meaning |
 |---|---|---|

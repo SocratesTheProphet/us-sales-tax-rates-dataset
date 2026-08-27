@@ -2,7 +2,7 @@
 
 [![Validate](https://github.com/SocratesTheProphet/us-sales-tax-rates-dataset/actions/workflows/validate.yml/badge.svg)](https://github.com/SocratesTheProphet/us-sales-tax-rates-dataset/actions/workflows/validate.yml)
 
-Machine-readable **statewide base sales-tax rates for all 50 US states + DC**, validated against official state tax-authority (DOR-equivalent) sources on **2026-07-01**. Available as JSON and CSV, at quarter-basis-point precision, with enacted future rate changes included and dated.
+Machine-readable **statewide base sales-tax rates for all 50 US states + DC**, validated against official state tax-authority (DOR-equivalent) sources on **2026-08-01**. Available as JSON and CSV, at quarter-basis-point precision, with enacted future rate changes included and dated.
 
 Most free sales-tax data is ZIP-code-based and quietly wrong — ZIP codes cross tax jurisdictions, so a single "rate per ZIP" is a guess that can be off by a full percent or more. This dataset takes the opposite stance: it gives **authoritative statewide rates**, and where local rates genuinely vary, it **says so instead of fabricating a number**.
 
@@ -12,7 +12,7 @@ Most free sales-tax data is ZIP-code-based and quietly wrong — ZIP codes cross
 - **Honest about local variation.** 14 jurisdictions have no local sales tax or a uniform statewide rate — for those, the statewide rate **is** the authoritative combined rate. For the other 37, `local_varies: true` flags that a rooftop-level lookup is required, and the dataset does **not** invent a single combined number.
 - **Documented conventions.** Where a "statewide rate" bundles mandatory uniform local components (the Tax Foundation min-combined convention — e.g. California's 7.25% = 6% state + 1.25% mandatory uniform local), the decomposition is spelled out in the row's `source` string. No hidden assumptions.
 - **Future changes, dated.** Enacted-but-not-yet-effective changes are carried as `scheduled_change` with an effective date, so you can apply the right rate by date:
-  - District of Columbia — 6.500% → 7.000% on 2026-10-01
+  - District of Columbia — 6.000% → 7.000% on 2026-10-01
   - South Dakota — 4.200% → 4.500% on 2027-07-01
   - Louisiana — 5.000% → 4.750% on 2030-01-01
 - **Sourced per row.** Every state carries the DOR/source it was checked against.
@@ -59,11 +59,11 @@ To apply a scheduled change: if today ≥ `scheduled_change_date`, use `schedule
 
 ## Sourcing & validation
 
-All 51 base rates were validated on **2026-07-01** against official state DOR/tax-authority sources (a multi-pass sweep) (DC re-verified and corrected 2026-07-16; see CHANGELOG v1.0.1). Values are the minimum combined statewide rate under the Tax Foundation convention. Each row's `source` field records what it was checked against.
+All 51 base rates were validated on **2026-08-01** against official state DOR/tax-authority sources (a multi-pass sweep; DC corrected 6.5% → 6.0% in that pass — see CHANGELOG v1.1.1). Values are the minimum combined statewide rate under the Tax Foundation convention. Each row's `source` field records what it was checked against.
 
 ## Validating
 
-`scripts/validate.py` (stdlib-only) checks that `state-rates.json`, `state-rates.csv`, and `rate-history.csv` stay consistent — same code sets, matching fields, quarter-bps resolution, valid scheduled-change dates. Run it locally:
+`scripts/validate.py` (stdlib-only) checks that `state-rates.json` and `state-rates.csv` stay consistent — same code sets, matching fields, quarter-bps resolution, valid scheduled-change dates — and that `rate-history.csv` has the documented header and column count. Run it locally:
 
 ```
 python scripts/validate.py
@@ -87,4 +87,4 @@ This dataset is provided for informational purposes only and is **not** tax, leg
 
 ---
 
-*Maintained by Sean Murphy. Validated 2026-07-01 (DC re-verified 2026-07-16). Contributions and corrections welcome — open an issue with a DOR source link.*
+*Maintained by Sean Murphy. Validated 2026-08-01. Contributions and corrections welcome — open an issue with a DOR source link.*

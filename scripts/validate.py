@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate data/state-rates.json against data/state-rates.csv.
+"""Validate data/state-rates.json against data/state-rates.csv, and check data/rate-history.csv structure.
 
 Stdlib-only. Exits non-zero on any failure, prints itemized failures.
 Exits 0 with a PASS summary when everything checks out.
@@ -200,7 +200,8 @@ def main():
 
 def validate_history_csv():
     if not os.path.exists(HISTORY_PATH):
-        return  # built in a parallel stage; skip silently if absent
+        fail(f"rate-history.csv: missing at {HISTORY_PATH}")
+        return
 
     expected_header = [
         "date_observed", "code", "field", "old_value", "new_value",
@@ -230,7 +231,7 @@ def print_failures_and_exit(n_rows=None):
         sys.exit(1)
     else:
         suffix = f" ({n_rows} jurisdictions)" if n_rows is not None else ""
-        print(f"PASS: state-rates.json and state-rates.csv are consistent{suffix}")
+        print(f"PASS: state-rates.json, state-rates.csv, and rate-history.csv are consistent{suffix}")
         sys.exit(0)
 
 
